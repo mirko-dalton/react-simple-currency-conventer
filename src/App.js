@@ -29,14 +29,6 @@ const App = () => {
             .catch(error => error + alert('Błąd podczas pobierania danych'));
     }, [currency]);
 
-    const amountToConvert = e => {
-        setInputAmount(e.target.value)
-    };
-
-    const selectCurrency = e => {
-        setCurrency(e.target.value)
-    };
-
     return (
         <>
             <div className='container'>
@@ -49,10 +41,10 @@ const App = () => {
                     />
                     <div className='container-title'>
                         <CurrencyInput
-                            inputChange={amountToConvert}
+                            inputChange={(e) => setInputAmount(e.target.value)}
                         />
                         <CurrencySelect
-                            selectClick={selectCurrency}
+                            selectClick={(e) => setCurrency(e.target.value)}
                         />
                         <span className='no-name-span'>TO</span>
                         <CurrencyOutput

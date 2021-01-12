@@ -22,13 +22,9 @@ const currencyOptions = [
 
 const CurrencySelect = (props) => {
 
-    const {
-        selectClick,
-    } = props;
-
     return (
         <select className='select-currency-option'
-            onChange={selectClick}>
+            onChange={props.selectClick}>
             {currencyOptions.map((option) =>
                 <option key={option.value} value={option.value}>{option.label}</option>
             )};
