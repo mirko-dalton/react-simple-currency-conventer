@@ -1,7 +1,7 @@
 import React from 'react';
 import NumberFormat from 'react-number-format';
 
-const CurrencyInputField = (props) => {
+const CurrencyInput = (props) => {
 
     return (
         <NumberFormat
@@ -11,10 +11,9 @@ const CurrencyInputField = (props) => {
             placeholder='suma do przeliczenia'
             decimalSeparator='.'
             allowedDecimalSeparators=','
-            inputmode='numeric'
         />
     );
 
 };
 
-export default CurrencyInputField;
+export default CurrencyInput;
