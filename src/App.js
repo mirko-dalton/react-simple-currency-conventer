@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CurrencyHeader from './components/CurrencyHeader';
 import CurrencyInfo from './components/CurrencyInfo';
 import CurrencySelect from './components/CurrencySelect';
-import CurrencyInput from './components/CurrencyInput';
+import CurrencyInputField from './components/CurrencyInput';
 import CurrencyOutput from './components/CurrencyOutput';
 import Footer from './components/Footer';
 import './App.css';
@@ -40,7 +40,7 @@ const App = () => {
                         currencyAmount={currencyAmount}
                     />
                     <div className='container-title'>
-                        <CurrencyInput
+                        <CurrencyInputField
                             inputChange={(e) => setInputAmount(e.target.value)}
                         />
                         <CurrencySelect
